@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import style from './page.module.css'
-import Button from './components/Button'
+import Button from '../../components/Button'
 
 export default function Home() {
 
@@ -10,7 +10,7 @@ export default function Home() {
     <div className={style.container}>
       <header className={style.header}></header>
       <main className={style.main}>
-        <Image src="/logo.svg" width="200" height="200" alt="User" />
+        <Image src="/logo-main.svg" width="200" height="200" alt="User" />
         <br />
         <br />
         <form className={style.form}>

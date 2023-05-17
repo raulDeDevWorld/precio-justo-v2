@@ -52,6 +52,18 @@
   resolved "https://registry.yarnpkg.com/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-13.4.2.tgz#8435ab6087046355f5de07122d3097949e8fab10"
   integrity sha512-O7bort1Vld00cu8g0jHZq3cbSTUNMohOEvYqsqE10+yfohhdPHzvzO+ziJRz4Dyyr/fYKREwS7gR4JC0soSOMw==
 
+"@react-input/core@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@react-input/core/-/core-1.0.0.tgz#57c21a2e7441657cc1d7bd276c7044343b2c24e1"
+  integrity sha512-2V2Q2mY7YR/13jG8dwAcHngZgOi6LN7lydRwQOnN63pm599E71JAwYY7BAsMDFJmk1dWv5K99kjuTbecWrd8UA==
+
+"@react-input/mask@^1.0.11":
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/@react-input/mask/-/mask-1.0.11.tgz#d92b2c985fdbd29e23ac6e518482619bd847cfd3"
+  integrity sha512-bJmuQx2/0dUNspTwzB2AF8NCLxjft13KVfcd8kVwwE5X3beAfHiLMUQCNobQ9OwkJTeGzQvLGgXCgQ/3hAU9+A==
+  dependencies:
+    "@react-input/core" "^1.0.0"
+
 "@swc/helpers@0.5.1":
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.5.1.tgz#e9031491aa3f26bfcc974a67f48bd456c8a5357a"

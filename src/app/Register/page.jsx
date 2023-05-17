@@ -1,16 +1,16 @@
 'use client'
 
-
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
-
 import style from '../page.module.css'
-import Button from '../components/Button'
+import Button from '../../../components/Button'
 
 export default function Home() {
 
     const [select, setSelect] = useState(false)
+    const [rol, setRol] = useState('Cliente')
+
 
 
     function handlerSelect () {
@@ -18,12 +18,16 @@ export default function Home() {
     }
 
 
+    function handlerUserRol (data) {
+        setRol(data)
+    }
+
     return (
 
         <div className={style.container}>
             <header className={style.header}></header>
             <main className={style.main}>
-                <Image src="/logo.svg" width="200" height="200" alt="User" />
+                <Image src="/logo-main.svg" width="200" height="200" alt="User" />
                 <br />
                 <br />
                 <form className={style.form}>
@@ -33,21 +37,16 @@ export default function Home() {
                     <input className={style.input} type="text" placeholder="" />
                     <br />
                     <label htmlFor="">Tipo de cuenta</label>
-                    {/* <select className={style.input} name="cars" id="cars" form="carform">
-                        <option value="volvo">Cliente Regular</option>
-                        <option value="saab">Médico</option>
-                        <option value="audi">Clínica</option>
-                        <option value="opel">Distrubuidor de insumos médicos</option>
-                    </select> */}
+              
 
 
                     <div className={select ? style.select: style.noSelect} onClick={handlerSelect}>
-                        Select
+                        {rol} <span>{'>'}</span>
                         <ul>
-                            <li>Cliente</li>
-                            <li>Médico</li>
-                            <li>Clínica</li>
-                            <li>Distrubuidor de insumos médicos</li>
+                            <li onClick={(e)=>handlerUserRol('Cliente')}>Cliente</li>
+                            <li onClick={(e)=>handlerUserRol('Medico')}>Médico</li>
+                            <li onClick={(e)=>handlerUserRol('Clinica')}>Clínica</li>
+                            <li onClick={(e)=>handlerUserRol('Distribuidor')}>Distrubuidor</li>
                         </ul>
                     </div>
 
@@ -58,7 +57,7 @@ export default function Home() {
                     <input className={style.input} type="password" placeholder="" />
                     <br />
                     <div className={style.buttonsContainer}>
-                        <Button style='buttonPrimary' click='Register' >Registrate</Button>
+                        <Button style='buttonPrimary' click={rol} >Registrate</Button>
                     </div>
                     <br />
                     <div className={style.linkContainer} ><Link href="/SignUp" legacyBehavior><a className={style.link}>Olvidaste tu Contraseña</a></Link></div>

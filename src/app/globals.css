@@ -6,15 +6,15 @@
   --font-normal: 12px;
   --font-large: 16px;
 
-  --font-weight-ligth: 100;
-  --font-weight-medium: 200;
-  --font-weight-bold: 300;
+  --font-weight-ligth: 00;
+  --font-weight-medium: 300;
+  --font-weight-bold: 400;
 
   --color-primary: #2A52BE;
-  --color-secondary: #2A52BE;
+  --color-secondary: #5270E9;
   --color-white: white;
 
-
+  --border-radious: 15px;
   --link-color: #14EFA5;
 }
 html,
@@ -24,11 +24,16 @@ body {
   min-width: 100vw;
   min-height: 100vh;
   font-size: 12px;
-  font-weight: 100;
+  font-weight: 300;
   overflow-x: hidden;
 }
 
 
+* {
+  box-sizing: border-box;
+  font-weight: 300;
+
+}
 
 
 

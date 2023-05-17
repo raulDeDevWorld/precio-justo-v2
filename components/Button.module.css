@@ -1,4 +1,5 @@
 .button {
+    box-sizing: border-box;
     display: block;
     position: relative;
     cursor: pointer;
@@ -7,8 +8,8 @@
     width: 90%;
     min-width: 150px;
     max-width: 250px;
-    padding: 8px 1px;
-    border-radius: 20px;
+    padding: 10px 1px;
+    border-radius: 15px;
 
     transition-duration: .5s;
 }
@@ -26,8 +27,8 @@
 }
 
 .buttonSecondary {
-    color: #000000;
-    background-color: #F1BA06;
+    color: #ffffff;
+    background-color: var(--color-secondary);
     border: 2px solid #ffffff3c;
 }
 
@@ -36,10 +37,10 @@
     background-color: #294B98;
     border: 2px solid #7d99da;
 }
-.buttonSecondaryPDF {
+.buttonSecondaryGreen {
     width: 100%;
-    color: #000000;
-    background-color: #F1BA06;
+    color: #ffffff;
+    background-color: #14EFA5;
     border: 2px solid #ffffff3c;
 }
 
